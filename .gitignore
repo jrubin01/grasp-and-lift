@@ -1,0 +1,10 @@
+.DS_Store
+
+# python venv
+venv/
+
+# data
+train/
+test/
+
+.ipynb_checkpoints/
