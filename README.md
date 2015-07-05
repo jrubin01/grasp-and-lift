@@ -5,12 +5,14 @@ Setup
 
 * requires pip and python
 
-1. Clone repository
+<ol>
+<li>Clone repository
 
 <code>
 git clone https://github.com/jrubin01/grasp-and-lift.git
 cd grasp-and-lift
 </code>
+</li>
 
 2. Create virtual environment
 
@@ -30,3 +32,4 @@ pip install -r requirements.txt
 <code>
 ipython notebook
 </code>
+</ol>
