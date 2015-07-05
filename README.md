@@ -6,30 +6,33 @@ Setup
 * requires pip and python
 
 <ol>
-<li>Clone repository
-
-<code>
-git clone https://github.com/jrubin01/grasp-and-lift.git
-cd grasp-and-lift
-</code>
+<li>
+	Clone repository
+	<code>
+	git clone https://github.com/jrubin01/grasp-and-lift.git
+	cd grasp-and-lift
+	</code>
 </li>
 
-2. Create virtual environment
+<li>
+	Create virtual environment
+	<code>
+	virtualenv venv
+	source venv/bin/activate
+	</code>
+<//li>	
 
-<code>
-virtualenv venv
-source venv/bin/activate
-</code>
+<li>
+	Install required libraries
+	<code>
+	pip install -r requirements.txt
+	</code>
+<'li>
 
-3. Install required libraries
-
-<code>
-pip install -r requirements.txt
-</code>
-
-4. Start ipython
-
-<code>
-ipython notebook
-</code>
+<li>
+	Start ipython
+	<code>
+	ipython notebook
+	</code>
+</li>	
 </ol>
