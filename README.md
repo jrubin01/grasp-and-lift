@@ -22,7 +22,7 @@ Setup
 <li>
 	Install required libraries<br/>
 	<code>pip install -r requirements.txt</code>
-<'li>
+</li>
 
 <li>
 	Start ipython<br/>
