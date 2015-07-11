@@ -8,3 +8,6 @@ train/
 test/
 
 .ipynb_checkpoints/
+
+# large csv ressult files
+results/

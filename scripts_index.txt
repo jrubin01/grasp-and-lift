@@ -1,0 +1,19 @@
+scripts index
+-------------
+
+split_train_test_benchmark_original					# train on series 1-6, test on series 7-8, logistic regression classifier
+
+split_train_test_in_memory							# train on series 1-6, test on series 7-8, logistic regression classifier
+													# store transformed data in array before classification, multiple classifiers 
+													# !!! extremely memory intensive !!!
+results
+-------
+
+split_train_test_benchmark_original:
+
+	Final AUC: 0.622196397229 (subsample = 10)
+	Final AUC: 0.633816663314 (subsample = 1)
+	
+split_train_test_in_memory:	
+
+	Final AUC: 0.633816663314 (subsample = 1)		# logistic regression

@@ -166,7 +166,7 @@ for subject in subjects:
     csp = CSP(n_components=nfilters, reg='lws')
     csp.fit(X,y)
     
-    ################ Create Training Features #################################
+    ################ Create Training Features #################################x`
     # apply csp filters and rectify signal
     feat = np.dot(csp.filters_[0:nfilters],raw._data[picks])**2
     
