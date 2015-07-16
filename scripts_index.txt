@@ -6,14 +6,50 @@ split_train_test_benchmark_original					# train on series 1-6, test on series 7-
 split_train_test_in_memory							# train on series 1-6, test on series 7-8, logistic regression classifier
 													# store transformed data in array before classification, multiple classifiers 
 													# !!! extremely memory intensive !!!
+													
+split_train_test_filterbank_logistic_regression		# train on series 1-6, test on series 7-8, logistic regression classifier
+													# filter bank csp
+													
+raw_eeg_full_train									# raw eeg signal, uses all train series, gradient boosting (submitted)
+
+gradient_boosting_standard_scaler_0.4-30			# uses all train series, uses standard scaler, gradient boosting
+													
 results
 -------
 
 split_train_test_benchmark_original:
 
-	Final AUC: 0.622196397229 (subsample = 10)
-	Final AUC: 0.633816663314 (subsample = 1)
+	Final AUC: 0.622196397229 (subsample = 10, nfilters = 4)
+	Final AUC: 0.633816663314 (subsample = 1,  nfilters = 4)
+	
+	Final AUC: 0.627574088781 (subsample = 10, nfilters = 4, freq= [0.4, 30], StandardScaler)
+	Final AUC: 0.607722620322 (subsample = 10, nfilters = 4, freq= [1, 30], StandardScaler)
+	
+	Final AUC: 0.61905031631 (subsample = 10, nfilters = 8)
+	Final AUC: 0.61222768311 (subsample = 10, nfilters = 8, C = 0.3)
+	
+	Final AUC: 0.61923320182 (subsample = 10, nfilters = 6)
+
+	
 	
 split_train_test_in_memory:	
 
 	Final AUC: 0.633816663314 (subsample = 1)		# logistic regression
+
+split_train_test_filterbank_logistic_regression
+
+	Final AUC: 0.598711773315 (subsample = 1)		# [[4, 8], [6, 10], [8, 12], [10, 14], [12, 16], [14, 18], [16, 20], [18, 22], [20, 24], [22, 26], [24, 28], [26, 30]]
+	Final AUC: 0.553783977655 (subsample = 1)		# [[4, 8], [8, 12], [12, 16], [16, 20], [20, 24], [24, 28]]
+	
+Submitted to kaggle
+-------------------	
+	
+raw_eeg_full_train
+	
+	Final AUC: 0.71903 (subsample = 1)
+	
+gradient_boosting_standard_scaler_0.4-30
+
+	Final AUC: 0.63827 (subsample = 1)
+	
+		
