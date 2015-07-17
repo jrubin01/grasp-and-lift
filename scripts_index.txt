@@ -29,7 +29,6 @@ split_train_test_benchmark_original:
 	Final AUC: 0.61222768311 (subsample = 10, nfilters = 8, C = 0.3)
 	
 	Final AUC: 0.61923320182 (subsample = 10, nfilters = 6)
-
 	
 	
 split_train_test_in_memory:	
@@ -38,8 +37,12 @@ split_train_test_in_memory:
 
 split_train_test_filterbank_logistic_regression
 
-	Final AUC: 0.598711773315 (subsample = 1)		# [[4, 8], [6, 10], [8, 12], [10, 14], [12, 16], [14, 18], [16, 20], [18, 22], [20, 24], [22, 26], [24, 28], [26, 30]]
-	Final AUC: 0.553783977655 (subsample = 1)		# [[4, 8], [8, 12], [12, 16], [16, 20], [20, 24], [24, 28]]
+	Final AUC: 0.667079192561 (subsample = 1)		# [[4, 8], [6, 10], [8, 12], [10, 14], [12, 16], [14, 18], [16, 20], [18, 22], [20, 24], [22, 26], [24, 28], [26, 30]]
+	Final AUC: 0.670956829878 (subsample = 1)		# range(4, 28, 2), as above, with standard scaler on train
+	
+xxx	Final AUC: 0.553783977655 (subsample = 1)		# [[4, 8], [8, 12], [12, 16], [16, 20], [20, 24], [24, 28]]	xxx
+	
+	
 	
 Submitted to kaggle
 -------------------	
