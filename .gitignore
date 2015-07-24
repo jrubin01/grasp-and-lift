@@ -6,6 +6,7 @@ venv/
 # data
 train/
 test/
+P6/
 
 .ipynb_checkpoints/
 

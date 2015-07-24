@@ -13,6 +13,8 @@ split_train_test_filterbank_logistic_regression		# train on series 1-6, test on 
 raw_eeg_full_train									# raw eeg signal, uses all train series, gradient boosting (submitted)
 
 gradient_boosting_standard_scaler_0.4-30			# uses all train series, uses standard scaler, gradient boosting
+
+split_train_test_all_events_csp						# build multiple csp models based on events and use to train event distinct logistic regression classifiers
 													
 results
 -------
@@ -43,6 +45,28 @@ split_train_test_filterbank_logistic_regression
 xxx	Final AUC: 0.553783977655 (subsample = 1)		# [[4, 8], [8, 12], [12, 16], [16, 20], [20, 24], [24, 28]]	xxx
 	
 	
+split_train_test_all_events_csp
+	
+	Final AUC: 0.622196397229 (subject=1, subsample = 10)		# Replace
+	Final AUC: 0.622747994532 (subject=1, subsample = 10)		# HandStart(0.3), Replace
+	Final AUC: 0.63912293142  (subject=1, subsample = 10)		# HandStart(1),   Replace
+	Final AUC: 0.649446249482 (subject=1, subsample = 10)		# HandStart(1),   Replace, StandardScaler	
+	Final AUC: 0.664138143398 (subject=1, subsample = 10)		# HandStart(1),   LiftOff(0.3), Replace, StandardScaler	
+	Final AUC: 0.677522568717 (subject=1, subsample = 10)		# HandStart(1),   LiftOff(0.5), Replace, StandardScaler	
+	Final AUC: 0.693486761739 (subject=1, subsample = 10)		# HandStart(1),   LiftOff(0.5), FirstDigitTouch(0.5), Replace, StandardScaler	
+	Final AUC: 0.721838872977 (subject=1, subsample = 10)		# HandStart(1),   LiftOff(0.5), FirstDigitTouch(0.5), BothStartLoadPhase(1), Replace, StandardScaler	
+	Final AUC: 0.722812987344 (subject=1, subsample = 10)		# HandStart(1),   LiftOff(0.5), FirstDigitTouch(0.5), BothStartLoadPhase(1), Replace(0.5), StandardScaler	
+	
+	Final AUC: 0.6598311227 (subsample = 1)		# HandStart(1),   LiftOff(0.5), FirstDigitTouch(0.5), BothStartLoadPhase(1), Replace(0.5), StandardScaler	
+	
+split_train_test_all_events_itertools
+
+	Final AUC: 0.724290225729  (subject=1, subsample = 10)		# HandStart(1),   LiftOff(0.5), FirstDigitTouch(0.5), BothStartLoadPhase(1), Replace(0.5), StandardScaler	
+																# quadratic features
+																
+	Final AUC: 0.73026629149 (subject=1, subsample = 10)		# HandStart(1),   LiftOff(0.5), FirstDigitTouch(0.5), BothStartLoadPhase(1), Replace(0.5), StandardScaler	
+																# quadratic features, freq= [0.5, 30]																
+
 	
 Submitted to kaggle
 -------------------	
@@ -54,5 +78,9 @@ raw_eeg_full_train
 gradient_boosting_standard_scaler_0.4-30
 
 	Final AUC: 0.63827 (subsample = 1)
+	
+filterbank_gradient_boosting_standard_scaler
+	
+	Final AUC: 0.67314 (subsample = 1)
 	
 		
